@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/assets/icon3-BbaZS6ca.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Nothing+You+Could+Do&family=Over+the+Rainbow&display=swap"
+      rel="stylesheet"
+    />
+    <title>Line Notes</title>
+    <script type="module" crossorigin src="/assets/index-CS7wnUCU.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DN0DG7W3.css">
+  </head>
+  <body>
+    <div class="loading-screen" id="loading-screen">
+      <div class="loading-icons">
+        <img src="/icon/icon3.png" class="loading-icon icon-a" />
+        <img src="/icon/icon3.png" class="loading-icon icon-b" />
+        <img src="/icon/icon3.png" class="loading-icon icon-c" />
+        <img src="/icon/icon3.png" class="loading-icon icon-d" />
+        <img src="/icon/icon3.png" class="loading-icon icon-e" />
+        <img src="/icon/icon3.png" class="loading-icon icon-f" />
+      </div>
+      <p>Loading assets ...</p>
+      <div class="progress-bar">
+        <div class="loading-progress" id="progress-bar"></div>
+      </div>
+    </div>
+    <div id="ui-shell">
+      <div id="vignette"></div>
+      <div id="viewer-frame">
+        <div id="viewer"></div>
+        <div id="scene-dark-overlay"></div>
+        <div id="top-bar">
+          <button id="sound-off" type="button">
+            <i class="fa-solid fa-volume-high"></i>
+          </button>
+        </div>
+        <div id="bottom-bar">
+          <div>
+            <button id="prev-btn" class="arrow left">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button id="next-btn" class="arrow right">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <p>Swipe – Rotate – Zoom</p>
+          </div>
+        </div>
+      </div>
+      <aside id="info-panel">
+        <div class="card-header">LINE NOTE</div>
+        <div class="card-left">
+          <div id="card-number"></div>
+        </div>
+        <div class="card-right">
+          <div class="card-field">
+            <span class="card-label">OBJECT</span>
+            <h3 class="card-value" id="info-name"></h3>
+          </div>
+
+          <div class="card-field">
+            <span class="card-label">CONTEXT</span>
+            <p class="card-value" id="info-poetic"></p>
+          </div>
+          <div class="card-field">
+            <span class="card-label">CONTRIBUTOR</span>
+            <div class="card-value" id="info-details">
+              <span id="info-contributor"></span>
+              <span id="info-place-year"></span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div id="intro-overlay">
+      <div class="intro-inner">
+        <h1 class="intro-title">Line Notes</h1>
+        <p class="intro-body">
+          This interactive experience explores how the objects of our lives gain
+          significance through use, connection, and context. It emphasizes how
+          these relationships are largely invisible until we name and define
+          them. While computer vision systems can be trained to recognize the
+          shapes, surfaces, and patterns of objects, the meanings attached to
+          them move through memory and experience in ways that exceed
+          algorithmic understanding. By exposing the details and omissions
+          produced through digital translation, we consider the space between
+          recognition and understanding.
+        </p>
+        <div class="intro-hint">
+          <p>Use your computer controls to navigate.</p>
+          <p>LEFT/RIGHT takes you through the repository.</p>
+          <p>UP/DOWN changes your view.</p>
+          <p>Go all the way in to read detailed insights.</p>
+        </div>
+        <button id="intro-enter">Enter</button>
+      </div>
+    </div>
+    <div id="journey-backdrop"></div>
+    <div id="journey-complete" class="hidden">
+      <div class="journey-complete-inner">
+        <h2>You've viewed the entire repository</h2>
+        <div class="journey-complete-buttons">
+          <button id="view-credits">View Credits</button>
+          <button id="continue-browsing">Continue Browsing</button>
+        </div>
+      </div>
+    </div>
+    <div id="credits-overlay" class="hidden">
+      <div class="leftoutmodels">
+        <h1>Line Notes</h1>
+        <p>
+          Concept/Direction by
+          <a
+            href="https://meglouise.info/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Megan Young
+          </a>
+        </p>
+
+        <p>
+          Web Development by
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            Dyllan Evans
+          </a>
+        </p>
+
+        <p>
+          Technology Support by
+          <a
+            href="https://leoselvaggio.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Leonardo Selvaggio
+          </a>
+        </p>
+
+        <p>
+          Assistant Narrative Design by
+          <a
+            href="https://leoselvaggio.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Alexandria Young
+          </a>
+        </p>
+      </div>
+      <div class="credits-stage">
+        <div class="credits-content">
+          <h2>GOING DEEPER</h2>
+          <p>
+            Consider these digital archives not as a fixed collection of things,
+            but as a network of stories and relationships extending beyond the
+            limitations of code, lens, and screen.
+          </p>
+          <br />
+          <p>
+            The title carries related meanings across media, design, information
+            technology, performance, and community archiving. Line Notes can
+            refer to notes written in the margins, records of revision, or the
+            differences between a source and its reproduction. A line note marks
+            the space between intention and action, between what was remembered
+            and what was recorded, between what was meant and what was made. It
+            points toward the gaps, negotiations, and translations that shape
+            how meaning moves through the world.
+          </p>
+          <br />
+          <p>
+            In three-dimensional modeling, lines and polygons define the
+            structures through which machines interpret form. The digital
+            artifacts encountered here were created through photographic and
+            volumetric scanning processes that translate physical objects into
+            computational models. Along the way, details shift. Surfaces become
+            textures. Shadows become data. Objects emerge through incomplete
+            geometries, environmental conditions, and computational
+            approximations. What appears solid is, in many ways, an
+            interpretation.
+          </p>
+          <br />
+          <p>
+            Archives operate through similar acts of translation. Institutional
+            collections organize knowledge through systems of classification.
+            These structures help preserve and retrieve information, but they
+            cannot fully account for the meanings that emerge through lived
+            experience. The stories attached to these objects do not explain
+            them so much as place them in relation—to people, places, legacies,
+            and moments that exceed categorization.
+          </p>
+          <br />
+          <p>
+            The materials gathered here are annotations of significance and
+            form. Together, they suggest that meaning does not reside solely
+            within an object or its digital representation, but in the exchanges
+            they inspire. Some of those connections can be documented. Others
+            remain partial, shifting, or unresolved. Like the objects
+            themselves, they continue to change each time they are remembered,
+            shared, and encountered anew.
+          </p>
+          <div class="lines"></div>
+          <p>
+            Concept/Direction by
+            <a
+              href="https://meglouise.info/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Megan Young
+            </a>
+          </p>
+          <p>
+            Web Development by
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Dyllan Evans
+            </a>
+          </p>
+          <p>
+            Technology Support by
+            <a
+              href="https://leoselvaggio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Leonardo Selvaggio
+            </a>
+          </p>
+          <p>Assistant Narrative Design by Alexandria Young</p>
+
+          <h2>SPECIAL THANKS</h2>
+          <p>
+            This project is made possible through generous support from Assembly
+            for the Arts, Andrew W. Mellon Foundation, John S. and James L.
+            Knight Foundation, Baldwin Wallace University, West Shore Community
+            College, and through an Indiana University Research Micro Grant.
+          </p>
+        </div>
+        <div id="credits-final">
+          <h1>Thank you for checking out the respository</h1>
+        </div>
+      </div>
+      <button id="return-to-collection" class="hidden">
+        Return to Collection
+      </button>
+    </div>
+    <div class="credits">
+      <button id="credits-btn">Jump to Credits</button>
+    </div>
+  </body>
+</html>
