@@ -2,8 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="icon" type="image/x-icon" href="/public/icon/icon3.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +53,8 @@
             <button id="next-btn" class="arrow right">
               <i class="fa-solid fa-arrow-right"></i>
             </button>
-            <p>Swipe – Rotate – Zoom</p>
+            <p class="hint-desktop">Swipe – Rotate – Zoom</p>
+            <p class="hint-mobile">Drag - Pinch - Zoom</p>
           </div>
         </div>
       </div>
@@ -91,9 +98,8 @@
           recognition and understanding.
         </p>
         <div class="intro-hint">
-          <p>Use your computer controls to navigate.</p>
-          <p>LEFT/RIGHT takes you through the repository.</p>
-          <p>UP/DOWN changes your view.</p>
+          <p>Swipe takes you through the repository.</p>
+          <p>Scrolling in changes your view.</p>
           <p>Go all the way in to read detailed insights.</p>
         </div>
         <button id="intro-enter">Enter</button>
@@ -122,16 +128,31 @@
             Megan Young
           </a>
         </p>
-
         <p>
           Web Development by
-          <a href="dyllanevans.com" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://dyllanevans.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Dyllan Evans
           </a>
         </p>
-
         <p>
-          Technology Support by
+          Creative Technology by
+          <a
+            href="https://tea-cassidy.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tea Held
+          </a>
+          <span>and</span>
+          <a> Kellen Moran </a>
+        </p>
+        <p>Narrative Design with Alexandria Young</p>
+        <p>
+          Additional Technical Support by
           <a
             href="https://leoselvaggio.com"
             target="_blank"
@@ -139,10 +160,14 @@
           >
             Leonardo Selvaggio
           </a>
-        </p>
-
-        <p>
-          Assistant Narrative Design by Alexandria Young
+          <span>and</span>
+          <a
+            href="https://luddy.iu.edu/people/miller-nicole.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nicole Miller</a
+          >
         </p>
       </div>
       <div class="credits-stage">
@@ -209,12 +234,29 @@
           </p>
           <p>
             Web Development by
-            <a href="dyllanevans.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://dyllanevans.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Dyllan Evans
             </a>
           </p>
           <p>
-            Technology Support by
+            Creative Technology by
+            <a
+              href="https://tea-cassidy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tea Held
+            </a>
+            <span>and</span>
+            <a> Kellen Moran </a>
+          </p>
+          <p>Narrative Design with Alexandria Young</p>
+          <p>
+            Additional Technical Support by
             <a
               href="https://leoselvaggio.com"
               target="_blank"
@@ -222,15 +264,21 @@
             >
               Leonardo Selvaggio
             </a>
+            <span>and</span>
+            <a
+              href="https://luddy.iu.edu/people/miller-nicole.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Nicole Miller</a
+            >
           </p>
-          <p>Assistant Narrative Design by Alexandria Young</p>
-
           <h2>SPECIAL THANKS</h2>
           <p>
             This project is made possible through generous support from Assembly
             for the Arts, Andrew W. Mellon Foundation, John S. and James L.
             Knight Foundation, Baldwin Wallace University, West Shore Community
-            College, and through an Indiana University Research Micro Grant.
+            College, and through Indiana University Research and KIX Lab grants.
           </p>
         </div>
         <div id="credits-final">
@@ -241,7 +289,7 @@
         Return to Collection
       </button>
     </div>
-    <div class="credits">
+    <div class="credits hidden">
       <button id="credits-btn">Jump to Credits</button>
     </div>
     <script src="/main.js" type="module"></script>
